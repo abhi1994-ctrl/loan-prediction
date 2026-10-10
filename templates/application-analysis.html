@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">APPLICATION ANALYSIS</span><h2>Explore a sample application</h2><p>Fields, options and validation ranges come from the labeled training data.</p></div><span class="pill green">PRIVATE · NOT STORED</span></div>
+  <div class="form-layout"><form id="loan-form"><div id="fields" class="form-grid"></div><div class="form-actions"><button id="submit" class="button" type="submit">Analyze application <b>→</b></button><span>Values are processed for this prediction and are not saved.</span></div></form><aside id="result" class="result-card empty"><div class="result-icon">↗</div><span class="eyebrow dark">MODEL ESTIMATE</span><h3>Ready when you are</h3><p>Complete the form to view the model's predicted outcome and approval score.</p></aside></div>
+  <p class="disclaimer">Model confidence is not a guarantee. This academic demonstration is decision support only and is not a lending decision.</p>
+</section>
+{% endblock %}

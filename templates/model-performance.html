@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">HELD-OUT EVALUATION</span><h2>Compare classification models</h2><p>Stratified 80/20 split · approval is treated as the positive class</p></div><span class="pill">TEST SET</span></div>
+<div class="table-scroll"><table><thead><tr><th>MODEL</th><th>ACCURACY</th><th>PRECISION</th><th>RECALL</th><th>F1 SCORE</th><th>ROC–AUC</th></tr></thead><tbody id="model-rows"></tbody></table></div>
+<div class="selection-note"><b>Why was this model selected?</b><span id="selection-reason">The selection rationale is based on measured holdout metrics.</span></div>
+<div class="matrix-section"><div><span class="eyebrow dark">CONFUSION MATRIX</span><h3>Selected model · actual vs predicted</h3><p>Rows show actual outcome; columns show predicted outcome.</p></div><div id="matrix"></div></div></section>
+<section class="callout"><span class="callout-icon">i</span><div><b>Interpret metrics with care</b><p>These scores describe one holdout split of a small historical dataset. They are not evidence that this model is suitable for real lending decisions.</p></div></section>
+{% endblock %}

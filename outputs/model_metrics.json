@@ -1,0 +1,405 @@
+{
+  "selected_model": "Logistic Regression",
+  "selection_reason": "Highest held-out F1-score; ROC-AUC breaks ties.",
+  "positive_label": "Y",
+  "records": 614,
+  "feature_count": 11,
+  "missing_before": 149,
+  "missing_after": 0,
+  "class_counts": {
+    "Approved": 422,
+    "Rejected": 192
+  },
+  "target_distribution": [
+    {
+      "label": "Approved",
+      "count": 422
+    },
+    {
+      "label": "Rejected",
+      "count": 192
+    }
+  ],
+  "models": [
+    {
+      "name": "Logistic Regression",
+      "accuracy": 0.8292682926829268,
+      "precision": 0.872093023255814,
+      "recall": 0.8823529411764706,
+      "f1": 0.8771929824561403,
+      "roc_auc": 0.855108359133127,
+      "confusion_matrix": [
+        [
+          27,
+          11
+        ],
+        [
+          10,
+          75
+        ]
+      ]
+    },
+    {
+      "name": "Decision Tree",
+      "accuracy": 0.7073170731707317,
+      "precision": 0.8656716417910447,
+      "recall": 0.6823529411764706,
+      "f1": 0.7631578947368421,
+      "roc_auc": 0.7654798761609907,
+      "confusion_matrix": [
+        [
+          29,
+          9
+        ],
+        [
+          27,
+          58
+        ]
+      ]
+    },
+    {
+      "name": "Random Forest",
+      "accuracy": 0.7967479674796748,
+      "precision": 0.8488372093023255,
+      "recall": 0.8588235294117647,
+      "f1": 0.8538011695906432,
+      "roc_auc": 0.7947368421052632,
+      "confusion_matrix": [
+        [
+          25,
+          13
+        ],
+        [
+          12,
+          73
+        ]
+      ]
+    }
+  ],
+  "selected_metrics": {
+    "name": "Logistic Regression",
+    "accuracy": 0.8292682926829268,
+    "precision": 0.872093023255814,
+    "recall": 0.8823529411764706,
+    "f1": 0.8771929824561403,
+    "roc_auc": 0.855108359133127,
+    "confusion_matrix": [
+      [
+        27,
+        11
+      ],
+      [
+        10,
+        75
+      ]
+    ]
+  },
+  "confusion_labels": [
+    "Rejected",
+    "Approved"
+  ],
+  "feature_importance": [
+    {
+      "feature": "Credit History",
+      "importance": 0.14983827289145005,
+      "raw_importance": 0.14983827289145005
+    },
+    {
+      "feature": "LoanAmount",
+      "importance": 0.027282329156595495,
+      "raw_importance": 0.027282329156595495
+    },
+    {
+      "feature": "Property Area",
+      "importance": 0.022060758677983225,
+      "raw_importance": 0.022060758677983225
+    },
+    {
+      "feature": "CoapplicantIncome",
+      "importance": 0.02090688587255464,
+      "raw_importance": 0.02090688587255464
+    },
+    {
+      "feature": "Dependents",
+      "importance": 0.013389714397134378,
+      "raw_importance": 0.013389714397134378
+    },
+    {
+      "feature": "Married",
+      "importance": 0.011892679212980262,
+      "raw_importance": 0.011892679212980262
+    },
+    {
+      "feature": "Loan Amount Term",
+      "importance": 0.006469448244414117,
+      "raw_importance": 0.006469448244414117
+    },
+    {
+      "feature": "ApplicantIncome",
+      "importance": 0.004508663930688592,
+      "raw_importance": 0.004508663930688592
+    },
+    {
+      "feature": "Education",
+      "importance": 0.0011732325629421753,
+      "raw_importance": 0.0011732325629421753
+    },
+    {
+      "feature": "Gender",
+      "importance": 0.0,
+      "raw_importance": -0.004581463348293138
+    }
+  ],
+  "feature_schema": [
+    {
+      "name": "Gender",
+      "label": "Gender",
+      "type": "category",
+      "options": [
+        "Female",
+        "Male"
+      ],
+      "default": "Male"
+    },
+    {
+      "name": "Married",
+      "label": "Married",
+      "type": "category",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "default": "Yes"
+    },
+    {
+      "name": "Dependents",
+      "label": "Dependents",
+      "type": "category",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3+"
+      ],
+      "default": "0"
+    },
+    {
+      "name": "Education",
+      "label": "Education",
+      "type": "category",
+      "options": [
+        "Graduate",
+        "Not Graduate"
+      ],
+      "default": "Graduate"
+    },
+    {
+      "name": "Self_Employed",
+      "label": "Self Employed",
+      "type": "category",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "default": "No"
+    },
+    {
+      "name": "ApplicantIncome",
+      "label": "Applicant Income",
+      "type": "number",
+      "min": 150.0,
+      "max": 81000.0,
+      "default": 3812.5,
+      "step": "any"
+    },
+    {
+      "name": "CoapplicantIncome",
+      "label": "Coapplicant Income",
+      "type": "number",
+      "min": 0.0,
+      "max": 41667.0,
+      "default": 1188.5,
+      "step": "any"
+    },
+    {
+      "name": "LoanAmount",
+      "label": "LoanAmount",
+      "type": "number",
+      "min": 9.0,
+      "max": 700.0,
+      "default": 128.0,
+      "step": "any"
+    },
+    {
+      "name": "Loan_Amount_Term",
+      "label": "Loan Amount Term",
+      "type": "number",
+      "min": 12.0,
+      "max": 480.0,
+      "default": 360.0,
+      "step": 1
+    },
+    {
+      "name": "Credit_History",
+      "label": "Credit History",
+      "type": "number",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "step": 1
+    },
+    {
+      "name": "Property_Area",
+      "label": "Property Area",
+      "type": "category",
+      "options": [
+        "Rural",
+        "Semiurban",
+        "Urban"
+      ],
+      "default": "Semiurban"
+    }
+  ],
+  "numeric_statistics": {
+    "ApplicantIncome": {
+      "mean": 5403.459283387622,
+      "50%": 3812.5,
+      "min": 150.0,
+      "max": 81000.0
+    },
+    "CoapplicantIncome": {
+      "mean": 1621.2457980271008,
+      "50%": 1188.5,
+      "min": 0.0,
+      "max": 41667.0
+    },
+    "LoanAmount": {
+      "mean": 146.41216216216216,
+      "50%": 128.0,
+      "min": 9.0,
+      "max": 700.0
+    },
+    "Loan_Amount_Term": {
+      "mean": 342.0,
+      "50%": 360.0,
+      "min": 12.0,
+      "max": 480.0
+    },
+    "Credit_History": {
+      "mean": 0.8421985815602837,
+      "50%": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "distributions": {
+    "ApplicantIncome": [
+      {
+        "label": "150\u201311,700",
+        "count": 574
+      },
+      {
+        "label": "11,700\u201323,250",
+        "count": 32
+      },
+      {
+        "label": "23,250\u201334,800",
+        "count": 2
+      },
+      {
+        "label": "34,800\u201346,350",
+        "count": 3
+      },
+      {
+        "label": "46,350\u201357,900",
+        "count": 1
+      },
+      {
+        "label": "57,900\u201369,450",
+        "count": 1
+      },
+      {
+        "label": "69,450\u201381,000",
+        "count": 1
+      }
+    ],
+    "LoanAmount": [
+      {
+        "label": "9\u2013108",
+        "count": 177
+      },
+      {
+        "label": "108\u2013206",
+        "count": 339
+      },
+      {
+        "label": "206\u2013305",
+        "count": 48
+      },
+      {
+        "label": "305\u2013404",
+        "count": 14
+      },
+      {
+        "label": "404\u2013503",
+        "count": 9
+      },
+      {
+        "label": "503\u2013601",
+        "count": 3
+      },
+      {
+        "label": "601\u2013700",
+        "count": 2
+      }
+    ]
+  },
+  "approval_by": {
+    "Credit_History": [
+      {
+        "label": "0.0",
+        "rate": 0.07865168539325842,
+        "count": 89
+      },
+      {
+        "label": "1.0",
+        "rate": 0.7957894736842105,
+        "count": 475
+      },
+      {
+        "label": "nan",
+        "rate": 0.74,
+        "count": 50
+      }
+    ],
+    "Education": [
+      {
+        "label": "Graduate",
+        "rate": 0.7083333333333334,
+        "count": 480
+      },
+      {
+        "label": "Not Graduate",
+        "rate": 0.6119402985074627,
+        "count": 134
+      }
+    ],
+    "Property_Area": [
+      {
+        "label": "Rural",
+        "rate": 0.6145251396648045,
+        "count": 179
+      },
+      {
+        "label": "Semiurban",
+        "rate": 0.7682403433476395,
+        "count": 233
+      },
+      {
+        "label": "Urban",
+        "rate": 0.6584158415841584,
+        "count": 202
+      }
+    ]
+  }
+}

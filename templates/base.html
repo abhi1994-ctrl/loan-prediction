@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b"><title>{{ page_title }} · LoanIQ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="{{ active_page }}">
+  <aside class="sidebar">
+    <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">L</span><span>Loan<span class="accent">IQ</span><small>DECISION INTELLIGENCE</small></span></a>
+    <nav aria-label="Main navigation">
+      <a class="{{ 'active' if active_page == 'overview' else '' }}" href="{{ url_for('index') }}"><span class="nav-icon">◫</span>Overview</a>
+      <a class="{{ 'active' if active_page == 'application-analysis' else '' }}" href="{{ url_for('page', page_name='application-analysis') }}"><span class="nav-icon">⌁</span>Application Analysis</a>
+      <a class="{{ 'active' if active_page == 'model-performance' else '' }}" href="{{ url_for('page', page_name='model-performance') }}"><span class="nav-icon">▥</span>Model Performance</a>
+      <a class="{{ 'active' if active_page == 'influencing-factors' else '' }}" href="{{ url_for('page', page_name='influencing-factors') }}"><span class="nav-icon">✳</span>Influencing Factors</a>
+      <a class="{{ 'active' if active_page == 'dataset-insights' else '' }}" href="{{ url_for('page', page_name='dataset-insights') }}"><span class="nav-icon">◷</span>Dataset Insights</a>
+      <a class="{{ 'active' if active_page == 'about' else '' }}" href="{{ url_for('page', page_name='about') }}"><span class="nav-icon">ⓘ</span>About</a>
+    </nav>
+    <div class="side-note"><span class="pulse"></span>Academic project<small>Historical outcomes are not lending decisions.</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="crumb">LOANIQ / {{ page_title|upper }}</span><h1>{{ page_title }}</h1><p>{{ page_intro }}</p></div><span class="status" id="model-status"><i></i>Loading model…</span></header>
+    <div id="notice" class="notice hidden" role="status"></div>
+    {% block content %}{% endblock %}
+    <footer>LOANIQ · ACADEMIC DECISION SUPPORT <span>HISTORICAL DATA · HUMAN REVIEW REQUIRED</span></footer>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

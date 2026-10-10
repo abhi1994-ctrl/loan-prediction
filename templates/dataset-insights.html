@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="metrics compact-metrics"><article class="metric-card"><span class="label">LABELED RECORDS</span><strong id="dataset-records">—</strong></article><article class="metric-card"><span class="label">MODEL FEATURES</span><strong id="dataset-features">—</strong></article><article class="metric-card"><span class="label">MISSING BEFORE IMPUTATION</span><strong id="dataset-missing">—</strong></article><article class="metric-card"><span class="label">APPROVAL RATE</span><strong id="dataset-approval-rate">—</strong></article></section>
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">DISTRIBUTIONS</span><h2>Applicant income and loan amount</h2><p>Histograms summarize the values in the labeled training data.</p></div></div><div id="distribution-insights" class="distribution-grid"></div></section>
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">NUMERIC SUMMARY</span><h2>Training feature statistics</h2><p>Mean, median and observed range before preprocessing.</p></div></div><div class="table-scroll" id="numeric-summary"></div></section>
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">OUTCOME BY GROUP</span><h2>Observed approval rates</h2><p>Historical rates across selected attributes; not individual eligibility estimates.</p></div></div><div id="group-insights" class="group-grid"></div></section>
+<section class="callout"><span class="callout-icon">i</span><div><b>Dataset limitations</b><p>Historical records may contain sampling bias and outdated lending patterns. Group rates are descriptive and do not establish fairness or causality.</p></div></section>
+{% endblock %}

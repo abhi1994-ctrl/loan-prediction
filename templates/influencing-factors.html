@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel page-panel"><div class="panel-heading"><div><span class="eyebrow dark">MODEL EXPLAINABILITY</span><h2>Factors influencing predictions</h2><p>Permutation importance measured on held-out records using approval F1 score.</p></div><span class="pill">DATA-DRIVEN</span></div>
+<div id="importance" class="importance"></div><div class="selection-note"><b>How to read this chart</b><span>Longer bars mean permuting that input changed the model's F1 score more in this evaluation. A low or negative measured effect can appear as zero.</span></div></section>
+<section class="callout"><span class="callout-icon">i</span><div><b>Importance does not show cause</b><p>These values describe how this fitted model used historical data. They do not prove that an applicant attribute causes loan approval or rejection.</p></div></section>
+{% endblock %}
